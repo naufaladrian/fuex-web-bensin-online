@@ -10,7 +10,7 @@ export default function Home() {
           <div className="features">
             <div className="welcome">
               <h1>Selamat Datang</h1>
-              <p>Prasetya Dhany</p>
+              <p>M Naufal Adrian</p>
             </div>
             <div className="features-card">
               <FeaturesItem
@@ -51,7 +51,7 @@ export default function Home() {
           <div className="adds">
             <div
               id="carouselExampleIndicators"
-              class="carousel slide"
+              className="carousel slide"
               data-bs-ride="true"
             >
               <div className="carousel-indicators">

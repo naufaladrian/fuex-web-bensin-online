@@ -12,6 +12,9 @@ export default function NavBar() {
   const help =()=>{
     navigate("/help")
   }
+  const akun=()=>{
+    navigate("/account")
+  }
   return (
     <div className="navigasi">
       <div className="navigasi-item">
@@ -27,7 +30,7 @@ export default function NavBar() {
         <p>Bantuan</p>
       </div>
       <div className="navigasi-item">
-        <img src="https://bensin-online.web.app/img/account.7f6cf170.svg" />
+        <img onClick={akun} src="https://bensin-online.web.app/img/account.7f6cf170.svg" />
         <p>akun</p>
       </div>
     </div>

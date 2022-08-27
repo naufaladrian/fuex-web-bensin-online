@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import PageLocation from "../components/PageLocation";
+import { useNavigate } from "react-router-dom";
 
 export default function Orders() {
   const orderData = [
@@ -19,15 +20,18 @@ export default function Orders() {
       status: "Menunggu Konfirmasi",
     },
   ];
+  const navigate = useNavigate();
 
-
+  const detail = () => {
+    navigate("/orderdetail")
+  }
   return (
     <>
       <div className="main">
         <div className="orders">
           <PageLocation judul="Pesanan" />
-          {orderData.map(( item, i) => (
-            <div className="order-container" key={i}>
+          {orderData.map((item, i) => (
+            <div className="order-container" onClick={detail} key={i}>
               <div className="order-item">
                 <p className="service-type">Isi Bensin</p>
                 <div className="service-desc">
@@ -44,7 +48,7 @@ export default function Orders() {
                 <p className="order-address">
                   {item.address}
                 </p>
-                <p className= {item.status==="Dalam Perjalanan"?"order-status perjalanan":item.status==="Batal"? "order-status batal":item.status==="Menunggu Konfirmasi"? "order-status menunggu" : "order-status selesai"}>{item.status}</p>
+                <p className={item.status === "Dalam Perjalanan" ? "order-status perjalanan" : item.status === "Batal" ? "order-status batal" : item.status === "Menunggu Konfirmasi" ? "order-status menunggu" : "order-status selesai"}>{item.status}</p>
               </div>
             </div>
           ))}
