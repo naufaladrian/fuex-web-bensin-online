@@ -8,6 +8,8 @@ import Orders from './pages/Orders';
 import Help from './pages/Help';
 import Account from './pages/Account';
 import OrderDetail from './pages/OrderDetail';
+import IsiBensin from './pages/IsiBensin';
+import CreateOrder from './pages/CreateOrder';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
         <Route path='/help' element={<Help/>}/>
         <Route path='/account' element={<Account/>}/>
         <Route path='/orderdetail' element={<OrderDetail/>}/>
+        <Route path='/isibensin' element={<IsiBensin/>}/>
+        <Route path='/buatpesanan' element={<CreateOrder/>}/>
       </Routes>
       </BrowserRouter>
     

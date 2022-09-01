@@ -1,8 +1,17 @@
 import React from "react";
 import FeaturesItem from "../components/FeaturesItem";
 import NavBar from "../components/NavBar";
+import { useNavigate } from 'react-router-dom'
 
 export default function Home() {
+  const navigate = useNavigate();
+  const isiBensin = () => {
+    navigate("/isibensin");
+  };
+  function konsultasi() {
+    window.open("https://api.whatsapp.com/send?phone=6289504731540&text=Saya%20Mau%20Konsultasi%20Nih%20Kak")
+    console.log("test");
+  }
   return (
     <>
       <div className="main">
@@ -16,10 +25,12 @@ export default function Home() {
               <FeaturesItem
                 img="https://bensin-online.web.app/img/bensin.83b9a03c.svg"
                 text="Isi Bensin"
+                action={isiBensin}
               />
               <FeaturesItem
                 img="https://bensin-online.web.app/img/konsultasi.f4372147.svg"
                 text="Konsultasi"
+                action={konsultasi}
               />
               <FeaturesItem
                 img="https://bensin-online.web.app/img/kupon.7834ca27.svg"
@@ -125,9 +136,9 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <NavBar/>
+          <NavBar />
         </div>
-      
+
       </div>
     </>
   );

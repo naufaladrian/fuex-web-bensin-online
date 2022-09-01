@@ -33,7 +33,7 @@ export default function OrderDetail() {
                     <h1>Detail Pembayaran</h1><hr />
                     <div className="item-pembayaran">
                         <p>Harga</p>
-                        <p>2 L / Rp. 10,000.00 L</p>
+                        <p>2 L / Rp. 20,000.00</p>
                     </div>
                     <div className="item-pembayaran">
                         <p>Layanan</p>
